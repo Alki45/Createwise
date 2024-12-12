@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PatientGrid UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @layer components {
+      .btn-primary {
+        @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600;
+      }
+      .btn-secondary {
+        @apply bg-gray-100 text-blue-500 font-bold py-2 px-4 rounded hover:bg-gray-200;
+      }
+      .card {
+        @apply shadow-lg rounded-lg p-6 bg-white;
+      }
+      
+      .btn-trial {
+        @apply bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+  <!-- Header Section -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-gray-800">
+        <span class="text-blue-500">patient</span>grid
+      </div>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="text-gray-600 hover:text-blue-500">Products</a>
+        <a href="#" class="text-gray-600 hover:text-blue-500">Plans</a>
+        <a href="#" class="text-gray-600 hover:text-blue-500">More</a>
+      </nav>
+      <!-- Buttons -->
+      <div class="flex space-x-4">
+        <button class="btn-secondary">Login</button>
+        <button class="btn-primary">Request a Demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="container mx-auto px-6 py-12">
+    <div class="flex flex-col lg:flex-row items-center">
+      <!-- Text -->
+      <div class="lg:w-1/2 mb-12 lg:mb-0">
+        <h1 class="text-5xl font-bold text-gray-800 leading-snug mb-6">
+          Medical Software To Attract And <span class="text-blue-500">Retain Patients</span>
+        </h1>
+        <p class="text-gray-600 text-lg mb-8">
+          Patientgrid's communication platform helps improve patient experience while staff hours.
+        </p>
+        <button class="btn-primary">Start For Free</button>
+      </div>
+      <!-- Image -->
+      <div class="lg:w-1/2 relative">
+        <img src="https://via.placeholder.com/600x400" alt="UI Screenshot" class="rounded-lg shadow-lg">
+        <!-- Inbox Card -->
+        <div class="absolute top-20 inset-x-0 mx-auto bg-white card w-11/12 lg:w-3/4">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-bold text-gray-800">Inbox</h3>
+            <div class="flex space-x-2">
+              <button class="btn-secondary">All</button>
+              <button class="btn-secondary">Calls</button>
+              <button class="btn-secondary">SMS</button>
+              <button class="btn-secondary">Voicemails</button>
+            </div>
+          </div>
+          <!-- List of Contacts -->
+          <ul class="space-y-4">
+            <li class="flex justify-between items-center">
+              <span class="text-gray-800">(305) 440-0856</span>
+              <button class="btn-primary">Call</button>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-800">(304) 450-0258</span>
+              <button class="btn-primary">Call</button>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-800">(325) 240-0998</span>
+              <button class="btn-primary">Call</button>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-800">(225) 440-0458</span>
+              <button class="btn-primary">Call</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seamless Collaboration Section -->
+    <section class="bg-blue-50 py-12">
+      <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Seamless collaboration for healthcare teams</h2>
+          <p class="text-gray-600 mb-6">
+            With shared inboxes, any team member can resolve the team's pending tasks. Individual staff members don't get overwhelmed and patients are always taken care of.
+          </p>
+        </div>
+        <div class="lg:w-1/2">
+          <img src="https://via.placeholder.com/500x300" alt="Collaboration UI" class="rounded-lg shadow-lg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Free Trial Section -->
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+        <div class="lg:w-1/2">
+          <img src="https://via.placeholder.com/400x300" alt="Doctor" class="rounded-lg">
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">We work on a month-to-month basis, try for free with no commitments</h2>
+          <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <!-- Updated Free Trial Button -->
+          <button class="btn-trial">14 Free Trial</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="https://via.placeholder.com/50" alt="Dr. James L." class="w-12 h-12 rounded-full">
+            <div>
+              <h3 class="font-bold text-gray-800">Dr. James L.</h3>
+              <p class="text-gray-500 text-sm">Psychologist, Canada</p>
+            </div>
+          </div>
+          <p class="text-gray-600">"Bring new business in by getting more online reviews. 94% use reviews to choose new doctors."</p>
+        </div>
+        <div class="card">
+          <h3 class="font-bold text-gray-800 mb-4">Save time with collaborative tools and automations</h3>
+          <p class="text-gray-600">15+ staff hours saved per week.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-bold text-gray-800 mb-4">Improve patient experience engaging the way they want</h3>
+          <p class="text-gray-600">90% of people prefer texts to phone calls.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-lg font-bold mb-4">patientgrid</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <p>+91-8853923455</p>
+          <p>+91-4567895478</p>
+          <p>patientgrid@gmail.com</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Subscribe Newsletter</h3>
+          <form class="flex space-x-2">
+            <input type="email" placeholder="Email" class="px-4 py-2 rounded text-gray-800 w-full">
+            <button class="btn-primary">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
